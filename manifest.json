@@ -1,0 +1,31 @@
+{
+  "name": "ssk-kargo",
+  "description": "SKANTA Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+
+  "host_permissions": ["https://*/*"],
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "action": {
+    "default_popup": "start.html",
+    "default_icon": {
+      "16": "/img/GSkanta16.png",
+      "32": "/img/GSkanta32.png",
+      "48": "/img/GSkanta48.png",
+      "128": "/img/GSkanta128.png"
+    }
+  },
+  "icons": {
+    "16": "/img/GSkanta16.png",
+    "32": "/img/GSkanta32.png",
+    "48": "/img/GSkanta48.png",
+    "128": "/img/GSkanta128.png"
+  },
+  "content_scripts":
+    [
+        {
+            "js": [ "background.js" ],
+            "matches": [ "https://*/*" ]
+        }
+    ]
+}
